@@ -90,16 +90,18 @@ p { margin: 0; }
 .section-heading > p { max-width: 520px; color: var(--ink-soft); }
 
 .project-section { overflow: hidden; background: #f0f4f1; }
-.performance-intro { display: flex; justify-content: space-between; align-items: center; gap: 28px; margin: -12px 0 72px; padding: 26px 30px; border: 1px solid #cbdcd8; border-radius: 18px; background: rgba(255,255,255,.58); }
-.performance-lede { max-width: 390px; font-family: "Newsreader",Georgia,serif; font-size: 1.55rem; line-height: 1.2; }
-.performance-pill-row { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
-.performance-pill-row span { padding: 7px 12px; border: 1px solid #c3d6d1; border-radius: 999px; color: #426168; background: #fff; font-size: .76rem; font-weight: 600; }
-.case-study-heading { display: grid; grid-template-columns: 180px 1fr; gap: 42px; align-items: end; margin: 0 0 24px; }
-.case-study-heading > div:first-child { display: flex; align-items: center; gap: 12px; }
-.case-study-heading span { font-family: "Newsreader",Georgia,serif; font-size: 2.2rem; color: var(--teal); }
-.case-study-heading > div:first-child p { color: #687a80; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
-.case-study-heading h3 { font-family: "Newsreader",Georgia,serif; font-size: clamp(2rem,3.5vw,3.1rem); letter-spacing: -.025em; }
-.case-study-heading > div:last-child p { margin-top: 7px; color: var(--ink-soft); }
+.performance-intro { display: grid; grid-template-columns: minmax(260px,.8fr) minmax(420px,1.2fr); align-items: center; gap: 36px; margin: -12px 0 72px; padding: 28px 32px; border: 1px solid #cbdcd8; border-radius: 18px; background: rgba(255,255,255,.7); box-shadow: 0 12px 34px rgba(15,42,50,.05); }
+.performance-summary .eyebrow { margin-bottom: 7px; }
+.performance-lede { max-width: 430px; font-family: "Newsreader",Georgia,serif; font-size: 1.55rem; line-height: 1.2; }
+.performance-pill-row { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 9px; }
+.performance-pill-row span { padding: 9px 13px; border: 1px solid #c3d6d1; border-radius: 999px; color: #365860; background: #fff; font-size: .78rem; font-weight: 600; line-height: 1; box-shadow: 0 3px 10px rgba(15,42,50,.035); }
+.case-study-heading { display: grid; grid-template-columns: 180px minmax(0,1fr); gap: 34px; align-items: center; margin: 0 0 18px; padding: 24px 28px; border: 1px solid #cfddda; border-radius: 18px; background: rgba(255,255,255,.72); }
+.case-study-index { display: flex; align-items: center; gap: 14px; padding-right: 28px; border-right: 1px solid #cfddda; }
+.case-study-index span { display: grid; place-items: center; width: 46px; height: 46px; flex: 0 0 46px; border-radius: 50%; color: #fff; background: var(--ink); font-family: "Newsreader",Georgia,serif; font-size: 1.35rem; }
+.case-study-index p { color: #687a80; font-size: .72rem; font-weight: 700; line-height: 1.35; letter-spacing: .1em; text-transform: uppercase; }
+.case-study-copy { display: flex; justify-content: space-between; align-items: center; gap: 30px; }
+.case-study-heading h3 { font-family: "Newsreader",Georgia,serif; font-size: clamp(1.8rem,3vw,2.55rem); line-height: 1.05; letter-spacing: -.025em; }
+.case-study-copy p { max-width: 430px; color: var(--ink-soft); }
 .case-study-divider { height: 1px; margin: 100px 0 64px; background: #c9d8d5; }
 .project-shell { overflow: hidden; border-radius: 26px; background: #fff; box-shadow: var(--shadow); }
 .hvac-project .dashboard { background: #081d29; }
@@ -257,8 +259,9 @@ p { margin: 0; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-grid > p { grid-column: 1/-1; }
   .legal-layout { grid-template-columns: 210px minmax(0,1fr); gap: 42px; }
-  .performance-intro { align-items: flex-start; flex-direction: column; }
+  .performance-intro { grid-template-columns: 1fr; align-items: flex-start; }
   .performance-pill-row { justify-content: flex-start; }
+  .case-study-copy { align-items: flex-start; flex-direction: column; gap: 8px; }
 }
 
 @media (max-width: 760px) {
@@ -290,7 +293,10 @@ p { margin: 0; }
   .legal-layout { grid-template-columns: 1fr; gap: 34px; padding-top: 54px; }
   .legal-nav { position: static; grid-template-columns: 1fr 1fr; }
   .legal-nav strong { grid-column: 1/-1; }
-  .case-study-heading { grid-template-columns: 1fr; gap: 12px; }
+  .performance-intro { gap: 22px; margin-bottom: 54px; padding: 24px; }
+  .case-study-heading { grid-template-columns: 1fr; gap: 18px; padding: 22px; }
+  .case-study-index { padding: 0 0 18px; border-right: 0; border-bottom: 1px solid #cfddda; }
+  .case-study-heading h3 { font-size: 2rem; }
   .case-study-divider { margin: 76px 0 48px; }
 }
 

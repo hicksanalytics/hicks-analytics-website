@@ -29,12 +29,38 @@ const revealObserver = new IntersectionObserver(
 
 document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
 
-document.querySelector("#contact-form").addEventListener("submit", (event) => {
+const contactForm = document.querySelector("#contact-form");
+const formStatus = document.querySelector("#form-status");
+const submitButton = contactForm.querySelector('button[type="submit"]');
+
+contactForm.addEventListener("submit", async (event) => {
   event.preventDefault();
-  const data = new FormData(event.currentTarget);
-  const subject = encodeURIComponent(`Analytics inquiry from ${data.get("name")}`);
-  const body = encodeURIComponent(
-    `Name: ${data.get("name")}\nEmail: ${data.get("email")}\nCompany: ${data.get("company") || "Not provided"}\n\nHow can I help?\n${data.get("message")}`
-  );
-  window.location.href = `mailto:hicksanalytics@outlook.com?subject=${subject}&body=${body}`;
+
+  const defaultLabel = submitButton.textContent;
+  submitButton.disabled = true;
+  submitButton.textContent = "Sending...";
+  formStatus.textContent = "Sending your message...";
+  formStatus.classList.remove("form-success", "form-error");
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: "POST",
+      body: new FormData(contactForm),
+      headers: { Accept: "application/json" }
+    });
+
+    if (!response.ok) {
+      throw new Error("Form submission failed");
+    }
+
+    contactForm.reset();
+    formStatus.textContent = "Thanks — your message was sent. I’ll be in touch soon.";
+    formStatus.classList.add("form-success");
+  } catch (error) {
+    formStatus.textContent = "Something went wrong. Please email hicksanalytics@outlook.com or try again.";
+    formStatus.classList.add("form-error");
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = defaultLabel;
+  }
 });

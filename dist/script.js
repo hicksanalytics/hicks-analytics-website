@@ -36,5 +36,5 @@ document.querySelector("#contact-form").addEventListener("submit", (event) => {
   const body = encodeURIComponent(
     `Name: ${data.get("name")}\nEmail: ${data.get("email")}\nCompany: ${data.get("company") || "Not provided"}\n\nHow can I help?\n${data.get("message")}`
   );
-  window.location.href = `mailto:hicksanalyticssolutions@gmail.com?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:hicksanalytics@outlook.com?subject=${subject}&body=${body}`;
 });

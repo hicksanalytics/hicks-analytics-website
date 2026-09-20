@@ -90,7 +90,17 @@ p { margin: 0; }
 .section-heading > p { max-width: 520px; color: var(--ink-soft); }
 
 .project-section { overflow: hidden; background: #f0f4f1; }
-.project-section-secondary { background: #e9f1f4; }
+.performance-intro { display: flex; justify-content: space-between; align-items: center; gap: 28px; margin: -12px 0 72px; padding: 26px 30px; border: 1px solid #cbdcd8; border-radius: 18px; background: rgba(255,255,255,.58); }
+.performance-lede { max-width: 390px; font-family: "Newsreader",Georgia,serif; font-size: 1.55rem; line-height: 1.2; }
+.performance-pill-row { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
+.performance-pill-row span { padding: 7px 12px; border: 1px solid #c3d6d1; border-radius: 999px; color: #426168; background: #fff; font-size: .76rem; font-weight: 600; }
+.case-study-heading { display: grid; grid-template-columns: 180px 1fr; gap: 42px; align-items: end; margin: 0 0 24px; }
+.case-study-heading > div:first-child { display: flex; align-items: center; gap: 12px; }
+.case-study-heading span { font-family: "Newsreader",Georgia,serif; font-size: 2.2rem; color: var(--teal); }
+.case-study-heading > div:first-child p { color: #687a80; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.case-study-heading h3 { font-family: "Newsreader",Georgia,serif; font-size: clamp(2rem,3.5vw,3.1rem); letter-spacing: -.025em; }
+.case-study-heading > div:last-child p { margin-top: 7px; color: var(--ink-soft); }
+.case-study-divider { height: 1px; margin: 100px 0 64px; background: #c9d8d5; }
 .project-shell { overflow: hidden; border-radius: 26px; background: #fff; box-shadow: var(--shadow); }
 .hvac-project .dashboard { background: #081d29; }
 .hvac-project .dashboard-side { background: #092330; }
@@ -247,6 +257,8 @@ p { margin: 0; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-grid > p { grid-column: 1/-1; }
   .legal-layout { grid-template-columns: 210px minmax(0,1fr); gap: 42px; }
+  .performance-intro { align-items: flex-start; flex-direction: column; }
+  .performance-pill-row { justify-content: flex-start; }
 }
 
 @media (max-width: 760px) {
@@ -278,6 +290,8 @@ p { margin: 0; }
   .legal-layout { grid-template-columns: 1fr; gap: 34px; padding-top: 54px; }
   .legal-nav { position: static; grid-template-columns: 1fr 1fr; }
   .legal-nav strong { grid-column: 1/-1; }
+  .case-study-heading { grid-template-columns: 1fr; gap: 12px; }
+  .case-study-divider { margin: 76px 0 48px; }
 }
 
 @media (max-width: 470px) {

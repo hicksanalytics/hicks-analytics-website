@@ -184,22 +184,83 @@ function trackSection(selector, eventName) {
 trackSection("#work", "case_study_viewed");
 trackSection("#services", "services_viewed");
 
-// Calendly clicks
+// Calendly popup + booking tracking
+let lastCalendlyCtaLocation = "unknown";
+
 document
   .querySelectorAll('a[href*="calendly.com/hicksanalytics"]')
   .forEach((link) => {
-    link.addEventListener("click", () => {
-      const location =
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      lastCalendlyCtaLocation =
         link.closest("header") ? "nav" :
         link.closest(".hero") ? "hero" :
         link.closest("#contact") ? "contact" :
         "other";
 
       captureAnalytics("book_call_clicked", {
-        cta_location: location
+        cta_location: lastCalendlyCtaLocation
       });
+
+      const calendlyUtm = {};
+
+      if (attribution.utm_source) {
+        calendlyUtm.utmSource = attribution.utm_source;
+      }
+
+      if (attribution.utm_medium) {
+        calendlyUtm.utmMedium = attribution.utm_medium;
+      }
+
+      if (attribution.campaign) {
+        calendlyUtm.utmCampaign = attribution.campaign;
+      }
+
+      if (attribution.utm_content) {
+        calendlyUtm.utmContent = attribution.utm_content;
+      }
+
+      if (
+        window.Calendly &&
+        typeof window.Calendly.initPopupWidget === "function"
+      ) {
+        window.Calendly.initPopupWidget({
+          url: link.href,
+          utm: calendlyUtm
+        });
+      } else {
+        // Fallback if Calendly's script has not loaded yet
+        window.open(link.href, "_blank", "noopener");
+      }
     });
   });
+
+// Calendly tells the parent page when a real booking is completed.
+window.addEventListener("message", (event) => {
+  let isCalendlyOrigin = false;
+
+  try {
+    const hostname = new URL(event.origin).hostname;
+
+    isCalendlyOrigin =
+      hostname === "calendly.com" ||
+      hostname.endsWith(".calendly.com");
+  } catch {
+    return;
+  }
+
+  if (
+    isCalendlyOrigin &&
+    event.data &&
+    event.data.event === "calendly.event_scheduled"
+  ) {
+    captureOncePerSession("meeting_booked", {
+      booking_source: "calendly_popup",
+      cta_location: lastCalendlyCtaLocation
+    });
+  }
+});
 
 // Live demo click
 document

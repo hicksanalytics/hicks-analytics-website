@@ -90,7 +90,17 @@ p { margin: 0; }
 .section-heading > p { max-width: 520px; color: var(--ink-soft); }
 
 .project-section { overflow: hidden; background: #f0f4f1; }
+.project-section-secondary { background: #e9f1f4; }
 .project-shell { overflow: hidden; border-radius: 26px; background: #fff; box-shadow: var(--shadow); }
+.hvac-project .dashboard { background: #081d29; }
+.hvac-project .dashboard-side { background: #092330; }
+.hvac-project .dash-logo span { background: #55bfe8; }
+.hvac-project .dash-nav.active { color: #e1f6ff; background: rgba(85,191,232,.14); }
+.hvac-project .dash-nav.active i { background: #55bfe8; border-color: #55bfe8; }
+.hvac-project .dash-header span { color: #55bfe8; }
+.hvac-area { fill: url(#hvac-area); }
+.hvac-line { stroke: #55bfe8; }
+.hvac-bars i { background: linear-gradient(90deg,#55bfe8 var(--w),rgba(255,255,255,.07) var(--w)); }
 .dashboard { display: grid; grid-template-columns: 190px 1fr; min-height: 560px; color: #e4eef0; background: #091d25; }
 .dashboard-side { padding: 22px 14px; border-right: 1px solid rgba(255,255,255,.08); background: #0a2029; }
 .dash-logo { display: flex; align-items: center; gap: 8px; margin: 0 8px 30px; color: #fff; font-size: .76rem; font-weight: 700; }

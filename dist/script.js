@@ -279,11 +279,13 @@ document
 // GitHub project click
 document
   .querySelectorAll(
-    'a[href*="github.com/hicksanalytics/hicks-landscaping-analytics"]'
+    'a[href*="github.com/hicksanalytics/hicks-landscaping-analytics"], a[href*="github.com/hicksanalytics/hicks-hvac-analytics"]'
   )
   .forEach((link) => {
     link.addEventListener("click", () => {
-      captureAnalytics("project_github_clicked");
+      captureAnalytics("project_github_clicked", {
+        project: link.href.includes("hicks-hvac-analytics") ? "hvac" : "landscaping"
+      });
     });
   });
 

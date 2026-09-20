@@ -7,15 +7,18 @@ function closeMenu() {
   document.body.classList.remove("menu-open");
 }
 
-navToggle.addEventListener("click", () => {
-  const isOpen = nav.classList.toggle("open");
-  navToggle.setAttribute("aria-expanded", String(isOpen));
-  document.body.classList.toggle("menu-open", isOpen);
-});
+if (navToggle && nav) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+    document.body.classList.toggle("menu-open", isOpen);
+  });
 
-nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+  nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+}
 
-document.querySelector("#year").textContent = new Date().getFullYear();
+const year = document.querySelector("#year");
+if (year) year.textContent = new Date().getFullYear();
 // Hicks Analytics prospect attribution + event tracking
 const ATTRIBUTION_KEY = "ha_attribution_v1";
 const SESSION_KEY = "ha_tracking_session_v1";
@@ -344,9 +347,9 @@ document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe
 
 const contactForm = document.querySelector("#contact-form");
 const formStatus = document.querySelector("#form-status");
-const submitButton = contactForm.querySelector('button[type="submit"]');
+const submitButton = contactForm?.querySelector('button[type="submit"]');
 
-contactForm.addEventListener("submit", async (event) => {
+if (contactForm && formStatus && submitButton) contactForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const defaultLabel = submitButton.textContent;

@@ -31,7 +31,7 @@
         <a href="#services">Services</a>
         <a href="#industries">Who I Help</a>
         <a href="#about">About</a>
-        <a class="nav-cta" href="#contact">Start a Conversation</a>
+        <a class="nav-cta" href="https://calendly.com/hicksanalytics/30min" target="_blank" rel="noopener">Book a Free Call</a>
       </nav>
     </div>
   </header>
@@ -44,7 +44,7 @@
           <h1>Clear answers from the data you already have.</h1>
           <p class="hero-lede">Hicks Analytics helps small and growing businesses replace manual spreadsheets, disconnected reports, and unclear metrics with practical dashboards and dependable reporting.</p>
           <div class="button-row">
-            <a class="button button-primary" href="#contact">Schedule a Free Conversation</a>
+            <a class="button button-primary" href="https://calendly.com/hicksanalytics/30min" target="_blank" rel="noopener">Book a Free Strategy Call <span aria-hidden="true">↗</span></a>
             <a class="button button-secondary" href="#work">See the Work</a>
           </div>
           <ul class="proof-list" aria-label="Experience highlights">
@@ -256,13 +256,16 @@
           <p class="eyebrow">Start a conversation</p>
           <h2>Let’s talk about what is slowing your team down.</h2>
           <p>A short conversation is often enough to identify where better reporting, automation, or analytics support could make the biggest difference.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="https://calendly.com/hicksanalytics/30min" target="_blank" rel="noopener">Book a Free Strategy Call <span aria-hidden="true">↗</span></a>
+          </div>
           <dl>
             <div><dt>Email</dt><dd><a href="mailto:hicksanalytics@outlook.com">hicksanalytics@outlook.com</a></dd></div>
             <div><dt>Service area</dt><dd>Middle Tennessee and remote clients nationwide</dd></div>
             <div><dt>Engagements</dt><dd>Project-based, monthly retainer, or fractional support</dd></div>
           </dl>
         </div>
-        <form class="contact-form reveal" id="contact-form">
+        <form class="contact-form reveal" id="contact-form" action="https://formspree.io/f/mqpapkgn" method="POST">
           <div class="field-row">
             <label>Name<input name="name" autocomplete="name" required></label>
             <label>Email<input name="email" type="email" autocomplete="email" required></label>
@@ -270,7 +273,7 @@
           <label>Company<input name="company" autocomplete="organization"></label>
           <label>How can I help?<textarea name="message" rows="5" required placeholder="Tell me about the reporting or data challenge you are trying to solve."></textarea></label>
           <button class="button button-primary" type="submit">Send Message</button>
-          <p class="form-note">This opens your email app with your message ready to send.</p>
+          <p class="form-note" id="form-status" role="status" aria-live="polite">Replies usually arrive within one business day.</p>
         </form>
       </div>
     </section>

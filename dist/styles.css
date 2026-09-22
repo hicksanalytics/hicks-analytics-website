@@ -113,6 +113,15 @@ p { margin: 0; }
 .hvac-area { fill: url(#hvac-area); }
 .hvac-line { stroke: #55bfe8; }
 .hvac-bars i { background: linear-gradient(90deg,#55bfe8 var(--w),rgba(255,255,255,.07) var(--w)); }
+.legal-project .dashboard { background: #151b27; }
+.legal-project .dashboard-side { background: #111824; }
+.legal-project .dash-logo span { background: #e0b76a; }
+.legal-project .dash-nav.active { color: #fff4dc; background: rgba(224,183,106,.14); }
+.legal-project .dash-nav.active i { background: #e0b76a; border-color: #e0b76a; }
+.legal-project .dash-header span { color: #e0b76a; }
+.legal-area { fill: url(#legal-area); }
+.legal-line { stroke: #e0b76a; }
+.legal-bars i { background: linear-gradient(90deg,#e0b76a var(--w),rgba(255,255,255,.07) var(--w)); }
 .dashboard { display: grid; grid-template-columns: 190px 1fr; min-height: 560px; color: #e4eef0; background: #091d25; }
 .dashboard-side { padding: 22px 14px; border-right: 1px solid rgba(255,255,255,.08); background: #0a2029; }
 .dash-logo { display: flex; align-items: center; gap: 8px; margin: 0 8px 30px; color: #fff; font-size: .76rem; font-weight: 700; }

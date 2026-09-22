@@ -267,7 +267,9 @@ window.addEventListener("message", (event) => {
 
 // Live demo click
 document
-  .querySelectorAll('a[href*="streamlit.app"]')
+  .querySelectorAll(
+    'a[href*="landscapingdemo.hicksanalytics.com"], a[href*="hvacdemo.hicksanalytics.com"]'
+  )
   .forEach((link) => {
     link.addEventListener("click", () => {
       captureAnalytics("demo_clicked", {

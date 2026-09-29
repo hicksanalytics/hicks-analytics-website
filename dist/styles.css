@@ -201,6 +201,21 @@ p { margin: 0; }
 .pricing-footer strong { color: #fff; }
 .pricing-footer .button { flex: 0 0 auto; }
 
+.pilot-section { background: #eaf3ef; }
+.pilot-layout { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: clamp(38px,6vw,96px); align-items: center; }
+.pilot-intro h2 { max-width: 660px; }
+.pilot-intro > p:not(.eyebrow) { max-width: 620px; margin-top: 26px; color: var(--ink-soft); font-size: 1.06rem; line-height: 1.8; }
+.pilot-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; margin-top: 30px; }
+.pilot-actions span { color: #58706c; font-size: .83rem; font-weight: 600; }
+.pilot-detail { padding: clamp(25px,3vw,42px); border: 1px solid #c7ded5; border-radius: 23px; background: rgba(255,255,255,.8); box-shadow: 0 22px 55px rgba(16,56,49,.07); }
+.pilot-detail ol { margin: 18px 0 0; padding: 0; list-style: none; }
+.pilot-detail li { display: grid; grid-template-columns: 34px 1fr; gap: 14px; padding: 19px 0; border-bottom: 1px solid #dce9e4; }
+.pilot-detail li:first-child { padding-top: 0; }
+.pilot-detail li > span { color: var(--teal); font-size: .75rem; font-weight: 700; letter-spacing: .09em; }
+.pilot-detail strong { display: block; line-height: 1.35; }
+.pilot-detail li p { margin-top: 5px; color: #526b67; font-size: .9rem; line-height: 1.6; }
+.pilot-note { margin-top: 20px; color: #5c716e; font-size: .8rem; line-height: 1.55; }
+
 .industries-section { background: var(--navy); color: #fff; }
 .industries-section .eyebrow { color: var(--teal-bright); }
 .industries-section .section-heading > p { color: #9cb0b5; }
@@ -284,7 +299,7 @@ p { margin: 0; }
   .hero-visual { max-width: 600px; width: 100%; margin-inline: auto; }
   .outcomes-grid { grid-template-columns: 1fr 1fr; }
   .outcomes-grid > * { border-bottom: 1px solid var(--line); }
-  .section-heading,.project-story,.about-grid,.contact-grid,.pricing-heading { grid-template-columns: 1fr; gap: 42px; }
+  .section-heading,.project-story,.about-grid,.contact-grid,.pricing-heading,.pilot-layout { grid-template-columns: 1fr; gap: 42px; }
   .pricing-grid { grid-template-columns: 1fr; }
   .pricing-card h3,.pricing-card > p { min-height: 0; }
   .dashboard { grid-template-columns: 150px 1fr; }

@@ -353,6 +353,16 @@ const contactForm = document.querySelector("#contact-form");
 const formStatus = document.querySelector("#form-status");
 const submitButton = contactForm?.querySelector('button[type="submit"]');
 
+document.querySelectorAll("[data-pilot-apply]").forEach((link) => {
+  link.addEventListener("click", () => {
+    const interest = document.querySelector("#contact-interest");
+    const message = contactForm?.querySelector('textarea[name="message"]');
+    if (interest) interest.value = "14-day free trial";
+    if (message && !message.value.trim()) message.placeholder = "For the free trial, what is one business question you want your data to answer?";
+    captureAnalytics("pilot_interest_clicked");
+  });
+});
+
 if (contactForm && formStatus && submitButton) contactForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
@@ -373,10 +383,12 @@ if (contactForm && formStatus && submitButton) contactForm.addEventListener("sub
       throw new Error("Form submission failed");
     }
 
+    const isPilot = contactForm.querySelector("#contact-interest")?.value === "14-day free trial";
     contactForm.reset();
     formStatus.textContent = "Thanks — your message was sent. I’ll be in touch soon.";
     formStatus.classList.add("form-success");
     captureAnalytics("contact_form_submitted");
+    if (isPilot) captureAnalytics("pilot_inquiry_submitted");
   } catch (error) {
     formStatus.textContent = "Something went wrong. Please email hicksanalytics@outlook.com or try again.";
     formStatus.classList.add("form-error");

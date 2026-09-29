@@ -20,7 +20,17 @@
 <main>
   <section class="intro">
     <div><div class="eyebrow">One product · any business with data</div><h1>See the signal.<br>Ask a better question.</h1><p>Explore a fictional company’s margin, capacity, and performance. Choose a location and period, read the brief, then try the guided questions.</p><span class="note">Illustrative sample only · No client data</span></div>
-    <div class="walkthrough"><div class="eyebrow">Start here · five-step guided tour</div><h3>What would your own Hub show?</h3><p>Walk through the metrics, a daily brief, and the questions your team could ask.</p><button class="btn" id="open-tour">Explore the walkthrough</button></div>
+    <div class="walkthrough"><div class="eyebrow">Start here · five-step guided tour</div><h3>What would your own Hub show?</h3><p>Walk through the metrics, a daily brief, and the questions your team could ask.</p><a class="btn" style="display:inline-block;text-decoration:none;margin-right:8px" href="#watch-demo">▶ Watch the video</a><button class="btn" id="open-tour" style="margin-top:10px">Explore the walkthrough</button></div>
+  </section>
+  <section id="watch-demo" aria-labelledby="demo-video-title" class="panel" style="margin:8px 0 30px">
+    <div class="eyebrow">50-second product demo</div><h2 id="demo-video-title">One Hub, tailored to your business.</h2>
+    <video class="hub-demo-video" style="display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:12px;background:#0b232d" controls playsinline preload="none" poster="assets/performance-hub-poster.jpg" width="1280" height="720" aria-label="Performance Hub and AI Assistant product demo" aria-describedby="demo-video-note">
+              <source src="assets/performance-hub-demo.mp4" type="video/mp4">
+              <track kind="captions" src="assets/performance-hub-demo.vtt" srclang="en" label="English">
+              Your browser does not support this video. <a href="assets/performance-hub-demo.mp4">Download the Performance Hub demo</a>.
+            </video>
+    <p id="demo-video-note" class="disclosure">Fictional data and illustrative AI interactions. Original music; on-screen text tells the story. Your metrics, sources, and AI setup are tailored to your business.</p>
+    <details class="demo-transcript"><summary>Read the video overview</summary><p>A fictional owner opens a mobile Performance Hub, reviews revenue, gross margin, completed work, and capacity, then filters by location. A daily brief highlights a margin gap. Illustrative AI questions explore the highest-margin service and available capacity. The same product can be tailored to service businesses, clinics, retail, professional services, or other businesses with useful data. A 14-day free trial begins with one question and a focused set of measures.</p></details>
   </section>
   <section aria-label="Interactive dashboard">
     <div class="filters"><label>Period<select id="period"><option value="aug">August 2026</option><option value="jul">July 2026</option></select></label><label>Location<select id="location"><option value="all">All locations</option><option value="north">North</option><option value="central">Central</option><option value="south">South</option></select></label><span class="sample">Fictional Example Business · numbers update with filters</span></div>

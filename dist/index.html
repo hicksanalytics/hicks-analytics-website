@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f2a32'/%3E%3Cpath d='M17 15v34M47 15v34M18 32h28' stroke='%2345d6c5' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=20260929-product">
+  <link rel="stylesheet" href="styles.css?v=20260929-generic-video">
   <!-- Calendly popup widget -->
 <link
   href="https://assets.calendly.com/assets/external/widget.css"
@@ -62,8 +62,8 @@
         <a href="#work">Product</a>
         <a href="#services">Services</a>
         <a href="#solutions">Solutions</a>
-        <a href="#pilot">Pilot</a>
-        <a href="#use-cases">Demo Examples</a>
+        <a href="https://calendly.com/hicksanalytics/30min" target="_blank" rel="noopener">Book a Free Call</a>
+        <a href="#watch-demo">Watch Demo</a>
         <a href="#about">About</a>
         <a class="nav-cta" href="#pilot">Start Free Trial</a>
       </nav>
@@ -74,12 +74,12 @@
     <section class="hero" id="top">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <p class="eyebrow">Local data analytics consulting</p>
+          <p class="eyebrow">Performance Hub + AI Assistant</p>
           <h1>Your business, in one clear view.</h1>
           <p class="hero-lede">Whatever your industry, the Performance Hub + AI Assistant brings your most important measures into a private mobile view—so you can see what changed and ask better questions about what to do next.</p>
           <div class="button-row">
             <a class="button button-primary" href="#pilot">Explore the 14-Day Free Trial</a>
-            <a class="button button-secondary" href="#work">See the Product</a>
+            <a class="button button-secondary" href="#watch-demo">▶ Watch the 50-Second Demo</a>
           </div>
           <ul class="proof-list" aria-label="Experience highlights">
             <li><strong>10+</strong><span>years in analytics</span></li>
@@ -88,29 +88,11 @@
           </ul>
         </div>
 
-        <div class="hero-visual reveal" aria-label="Analytics workflow illustration">
-          <div class="signal-card signal-card-main">
-            <div class="signal-top">
-              <span>Business performance</span>
-              <span class="live-pill">Clear view</span>
-            </div>
-            <div class="signal-value">$2.84M</div>
-            <div class="signal-caption">Revenue analyzed in the featured demo</div>
-            <div class="spark" aria-hidden="true">
-              <span style="height:31%"></span><span style="height:43%"></span><span style="height:37%"></span>
-              <span style="height:57%"></span><span style="height:49%"></span><span style="height:68%"></span>
-              <span style="height:62%"></span><span style="height:81%"></span><span style="height:76%"></span>
-              <span style="height:92%"></span>
-            </div>
-          </div>
-          <div class="signal-card signal-card-small">
-            <span class="signal-icon">↗</span>
-            <strong>From messy inputs</strong>
-            <span>to trusted decisions</span>
-          </div>
-          <div class="hero-orbit hero-orbit-one"></div>
-          <div class="hero-orbit hero-orbit-two"></div>
-        </div>
+        <a class="hero-demo-card reveal" href="#watch-demo" aria-label="Watch the generic Performance Hub product demo">
+          <img src="assets/performance-hub-poster.jpg" width="1280" height="720" alt="Illustrative mobile Performance Hub with revenue, margin, work, and capacity measures" fetchpriority="high">
+          <span class="hero-demo-play" aria-hidden="true">▶</span>
+          <div class="hero-demo-caption"><strong>See your business in a clearer way.</strong><span>50-second demo · tailored to your data</span></div>
+        </a>
       </div>
     </section>
 
@@ -120,6 +102,29 @@
         <div><span class="outcome-label">Visibility</span><strong>One source of truth</strong></div>
         <div><span class="outcome-label">Decisions</span><strong>Clear, timely insights</strong></div>
         <p>No full-time analytics hire required.</p>
+      </div>
+    </section>
+
+    <section class="section hub-demo-section" id="watch-demo" aria-labelledby="demo-video-title">
+      <div class="container">
+        <div class="hub-demo-heading reveal">
+          <p class="eyebrow">Start here · 50-second product demo</p>
+          <h2 id="demo-video-title">One Performance Hub.<br>Built around your business.</h2>
+          <p>See a fictional owner explore performance, read a daily brief, and ask about the numbers. Then imagine the same experience with your own data and the questions that matter to you.</p>
+        </div>
+        <div class="hub-demo-player reveal">
+          <video class="hub-demo-video" controls playsinline preload="none" poster="assets/performance-hub-poster.jpg" width="1280" height="720" aria-label="Performance Hub and AI Assistant product demo" aria-describedby="demo-video-note">
+              <source src="assets/performance-hub-demo.mp4" type="video/mp4">
+              <track kind="captions" src="assets/performance-hub-demo.vtt" srclang="en" label="English">
+              Your browser does not support this video. <a href="assets/performance-hub-demo.mp4">Download the Performance Hub demo</a>.
+            </video>
+        </div>
+        <p class="hub-demo-note" id="demo-video-note">Fictional data and illustrative AI interactions · Original music; on-screen text tells the story · Client metrics, sources, and AI access are tailored during setup.</p>
+        <div class="hub-demo-tailoring reveal">
+          <div><h3>Your metrics. Your questions. Your Hub.</h3><p>From job margins to clinic capacity, product sales, or professional-service pipelines, we shape the Hub around your business. The industry demos below are examples of what is possible. <a href="https://calendly.com/hicksanalytics/30min" target="_blank" rel="noopener" style="color:#77e0bb;text-decoration:underline">Book a free strategy call to talk through your data.</a></p></div>
+          <div class="hub-demo-actions"><a class="button button-primary" href="#pilot">Explore the 14-Day Free Trial</a><a class="button button-secondary" href="/performance-hub-demo">Try the Interactive Demo</a></div>
+        </div>
+        <details class="demo-transcript"><summary>Read the video overview</summary><p>A fictional owner opens a mobile Performance Hub, reviews revenue, gross margin, completed work, and capacity, then filters by location. A daily brief highlights a margin gap. Illustrative AI questions explore the highest-margin service and available capacity. The same product can be tailored to service businesses, clinics, retail, professional services, or other businesses with useful data. A 14-day free trial begins with one question and a focused set of measures.</p></details>
       </div>
     </section>
 
@@ -154,22 +159,22 @@
             </ol>
             <div class="product-actions"><a class="button button-primary" href="#pilot">Start a 14-Day Free Trial</a><a class="button button-secondary" href="performance-hub-demo.html">Explore the Product Demo</a></div>
           </div>
-          <div class="product-visual" aria-label="Illustrative Performance Hub and AI conversation using fictional landscaping data">
+          <div class="product-visual" aria-label="Illustrative Performance Hub and AI conversation using fictional business data">
             <div class="product-visual-top"><span class="product-brand">H. <small>HICKS ANALYTICS</small></span><span class="product-sample">FICTIONAL SAMPLE</span></div>
             <div class="product-visual-body">
-              <p>VOLUNTEER LANDSCAPES · AUGUST 2026</p>
+              <p>EXAMPLE BUSINESS · AUGUST 2026</p>
               <h4>Performance at a glance</h4>
-              <div class="product-kpis"><div><span>Completed jobs</span><strong>1,462</strong></div><div><span>Gross margin</span><strong>49.6%</strong></div></div>
-              <div class="product-question"><span>YOU ASK</span><p>Which crew had the lowest margin this month?</p></div>
-              <div class="product-answer"><span>AI ASSISTANT</span><p>Crew C had the lowest gross margin in August at 42.5%. Compare job mix, labor, materials, and rework before drawing conclusions.</p></div>
+              <div class="product-kpis"><div><span>Completed work</span><strong>1,260</strong></div><div><span>Gross margin</span><strong>46%</strong></div></div>
+              <div class="product-question"><span>YOU ASK</span><p>Which service has the highest margin?</p></div>
+              <div class="product-answer"><span>AI ASSISTANT</span><p>Specialty leads at 57% gross margin. Compare its volume and capacity before expanding it.</p></div>
               <div class="product-visual-nav"><span>Hub</span><span>Brief</span><span>Ask AI</span></div>
             </div>
           </div>
         </div>
 
         <div class="use-case-intro reveal" id="use-cases">
-          <div><p class="eyebrow">Five demo examples · one adaptable product</p><h3>See it in action across industries.</h3></div>
-          <p>Start with the <a href="performance-hub-demo.html">industry-neutral product demo</a>, then explore these fictional case studies. They illustrate what the Hub can answer; they are not a list of eligible industries.</p>
+          <div><p class="eyebrow">Tailored to different businesses</p><h3>See it in action across industries.</h3></div>
+          <p>The <a href="#watch-demo">main product video</a> shows the shared experience. These fictional industry demos show how the measures and questions can change with your business. Your industry can be different, too.</p>
         </div>
         <div class="use-case-grid">
           <article class="use-case-card reveal"><span class="use-case-number">01 / FIELD SERVICES</span><h4>Landscaping</h4><p>Which jobs and crews protect margin? Explore job profitability, labor variance, estimates, and service areas.</p><a href="https://landscapingdemo.hicksanalytics.com/" target="_blank" rel="noopener">Explore landscaping demo <span aria-hidden="true">↗</span></a></article>
@@ -190,6 +195,7 @@
           <p>Start with one important decision. Together, we choose an available data source and a few measures that matter. I build a focused mobile-ready Performance Hub view, then walk you through the findings and what to do next.</p>
           <div class="pilot-actions">
             <a class="button button-primary" href="#contact" data-pilot-apply>Apply for the Free Trial</a>
+            <a class="button button-secondary" href="https://calendly.com/hicksanalytics/30min" target="_blank" rel="noopener">Book a Free Strategy Call</a>
             <span>No credit card · No automatic paid plan</span>
           </div>
         </div>
@@ -307,7 +313,8 @@
           <h2>Let’s talk about what is slowing your team down.</h2>
           <p>A short conversation is often enough to identify where better reporting, automation, or analytics support could make the biggest difference.</p>
           <div class="button-row">
-            <a class="button button-primary" href="#pilot">Explore the 14-Day Free Trial</a>
+            <a class="button button-primary" href="https://calendly.com/hicksanalytics/30min" target="_blank" rel="noopener">Book a Free Strategy Call</a>
+            <a class="button button-secondary" href="#pilot">Explore the 14-Day Free Trial</a>
           </div>
           <dl>
             <div><dt>Email</dt><dd><a href="mailto:hicksanalytics@outlook.com">hicksanalytics@outlook.com</a></dd></div>
@@ -337,5 +344,15 @@
       <p>© <span id="year"></span> Hicks Analytics. All rights reserved. <a class="footer-link" href="privacy.html">Privacy</a></p>
     </div>
   </footer>
+<script>
+    const hubDemoVideo = document.querySelector('.hub-demo-video');
+    if (hubDemoVideo) {
+      const trackedMilestones = new Set();
+      function trackDemo(name) { if (window.posthog && typeof window.posthog.capture === 'function') window.posthog.capture(name, {demo: 'generic_performance_hub', placement: 'homepage'}); }
+      hubDemoVideo.addEventListener('play', () => { if (!trackedMilestones.has('start')) { trackedMilestones.add('start'); trackDemo('performance_hub_video_started'); } });
+      hubDemoVideo.addEventListener('timeupdate', () => { if (hubDemoVideo.duration && hubDemoVideo.currentTime / hubDemoVideo.duration >= 0.5 && !trackedMilestones.has('half')) { trackedMilestones.add('half'); trackDemo('performance_hub_video_halfway'); } });
+      hubDemoVideo.addEventListener('ended', () => trackDemo('performance_hub_video_completed'));
+    }
+  </script>
 </body>
 </html>

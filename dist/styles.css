@@ -393,3 +393,21 @@ p { margin: 0; }
 @media (max-width: 980px) { .product-core { grid-template-columns: 1fr; }.product-visual { max-width: 620px; transform: none; }.use-case-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 @media (max-width: 760px) { .product-core { padding: 25px 19px; }.product-steps,.use-case-grid,.use-case-intro { grid-template-columns: 1fr; }.use-case-intro { margin-top: 65px; gap: 10px; }.use-case-card { min-height: 0; }.product-visual-body { padding: 18px 15px 0; }.product-visual-nav { margin-left: -15px; margin-right: -15px; }.product-question { margin-left: 20px; }.product-answer { margin-right: 13px; } }
 @media (prefers-reduced-motion: reduce) { .use-case-card { transition: none; }.use-case-card:hover { transform: none; } }
+
+/* The generic product film leads; industry examples explain tailoring. */
+.hero-demo-card { position: relative; display: block; align-self: center; overflow: hidden; border: 1px solid #28525a; border-radius: 22px; color: #fff; background: var(--navy); box-shadow: var(--shadow); transition: transform .2s; }
+.hero-demo-card:hover { transform: translateY(-4px); }
+.hero-demo-card:focus-visible { outline: 4px solid var(--teal-bright); outline-offset: 5px; }
+.hero-demo-card img { display: block; width: 100%; height: auto; }
+.hero-demo-play { position: absolute; display: grid; place-items: center; top: 24px; right: 24px; width: 54px; height: 54px; border-radius: 50%; color: var(--navy); background: #77e0bb; font-size: 1.25rem; box-shadow: 0 5px 25px #0003; }
+.hero-demo-caption { display: grid; gap: 4px; padding: 21px 24px; border-top: 1px solid #31565e; }
+.hero-demo-caption strong { font-size: 1rem; }.hero-demo-caption span { font-size: .8rem; color: #b8cec9; }
+.hub-demo-section { padding: 84px 0; background: #0b232d; color: #f5faf7; }
+.hub-demo-heading { max-width: 860px; margin: 0 auto 35px; text-align: center; }.hub-demo-heading .eyebrow { color: #77e0bb; }.hub-demo-heading > p:last-child { max-width: 760px; margin: 23px auto 0; color: #b8cec9; font-size: 1.05rem; }
+.hub-demo-player { overflow: hidden; border: 1px solid #315961; border-radius: 20px; background: #061b24; box-shadow: 0 26px 80px #0003; }
+.hub-demo-video { display: block; width: 100%; height: auto; aspect-ratio: 16/9; background: #0b232d; }
+.hub-demo-note { margin: 15px 0 0; color: #b8cec9; font-size: .78rem; text-align: center; }
+.hub-demo-tailoring { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 36px; align-items: center; margin-top: 35px; padding: 28px 0 0; border-top: 1px solid #315961; }.hub-demo-tailoring h3 { font-size: 1.4rem; margin-bottom: 10px; }.hub-demo-tailoring p { max-width: 700px; color: #b8cec9; }.hub-demo-actions { display: grid; gap: 10px; }.hub-demo-actions .button-primary { color: #0b232d; background: #77e0bb; }.hub-demo-actions .button-secondary { color: #f5faf7; border-color: #54767c; background: transparent; }.hub-demo-actions .button:hover { color: #0b232d; background: #b3efd8; }
+.demo-transcript { margin-top: 23px; color: #b8cec9; font-size: .86rem; }.demo-transcript summary { width: fit-content; cursor: pointer; color: #c1e9db; }.demo-transcript p { max-width: 920px; margin-top: 12px; }
+@media(max-width:980px) { .hub-demo-tailoring { grid-template-columns: 1fr; gap: 23px; }.hub-demo-actions { display: flex; flex-wrap: wrap; } }
+@media(max-width:760px) { .hub-demo-section { padding: 55px 0; }.hub-demo-heading h2 { font-size: clamp(2.25rem,9vw,3.4rem); }.hero-demo-play { top: 14px; right: 14px; width: 44px; height: 44px; }.hub-demo-player { border-radius: 12px; }.hub-demo-actions { display: grid; }.hero-demo-caption { padding: 17px 19px; } }

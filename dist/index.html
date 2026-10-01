@@ -44,6 +44,17 @@
 });
   </script>
   <script src="script.js" defer></script>
+
+<style id="ai-readiness-styles">
+.ai-foundation{background:#0d2831;color:#e7f3f3;padding:88px 0;scroll-margin-top:100px;position:relative;overflow:hidden}
+.ai-foundation .eyebrow{color:#74dfc4}.ai-foundation h2{color:#fff;font-size:clamp(2.2rem,4.3vw,3.8rem);line-height:1.08;max-width:760px;margin:14px 0 22px}.ai-foundation p{color:#b9ced3;font-size:1rem;line-height:1.7}
+.ai-foundation-head{display:grid;grid-template-columns:1.35fr 1fr;gap:64px;align-items:end}.ai-foundation-head>div>p:last-child{max-width:660px}.ai-source-cloud{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}.ai-source-cloud span{border:1px solid #49626a;border-radius:8px;padding:9px 13px;color:#d8e7ea;font-size:.875rem;background:#173640}.ai-foundation-note{font-size:.875rem!important;color:#8faeb6!important}
+.ai-roadmap{list-style:none;padding:0;margin:44px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;counter-reset:stage}.ai-stage{border:1px solid #39565f;background:#15333e;border-radius:16px;overflow:hidden;position:relative}.ai-stage:last-child{background:linear-gradient(135deg,#1d514e,#17333e);border-color:#64c9b2}.ai-stage details{height:100%}.ai-stage summary{padding:24px;cursor:pointer;list-style:none;position:relative}.ai-stage summary::-webkit-details-marker{display:none}.ai-stage summary:focus-visible{outline:3px solid #77e0bb;outline-offset:-4px}.ai-stage-top{display:flex;justify-content:space-between;align-items:center;color:#81d7c5;font-size:.875rem;font-weight:600;letter-spacing:.07em}.ai-stage-top b{display:grid;place-items:center;width:30px;height:30px;border:1px solid #476b73;border-radius:50%;font-size:1.15rem;font-weight:400}.ai-stage details[open] .ai-stage-top b{transform:rotate(45deg)}.ai-stage h3{font-size:1.3rem;color:#fff;margin:22px 0 10px}.ai-stage summary p{font-size:.9375rem;line-height:1.55;margin:0;min-height:48px}.ai-stage-deliverable{padding:0 24px 24px;font-size:.9375rem;color:#cde1e4;line-height:1.6}.ai-stage-deliverable strong{display:block;color:#7ee0c8;font-size:.8125rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:7px}
+.ai-context-example{margin-top:24px;display:grid;grid-template-columns:1fr 1.3fr;gap:28px;padding:30px;border:1px solid #45626a;border-radius:16px;background:#102d37}.ai-context-example h3{color:#fff;font-size:1.3rem;margin:0 0 12px}.ai-context-example p{margin:0}.ai-metric-example{display:grid;gap:12px}.ai-metric-example>div{border-left:2px solid #70dec1;padding-left:16px}.ai-metric-example span{font-size:.8125rem;color:#79d6c3;letter-spacing:.06em;text-transform:uppercase;display:block;margin-bottom:4px}.ai-metric-example p{font-size:.9375rem}
+.ai-foundation-footer{display:flex;justify-content:space-between;gap:32px;align-items:center;margin-top:32px}.ai-foundation-footer p{max-width:680px;margin:0}.ai-foundation-footer strong{color:#fff}.ai-foundation .button-primary{background:#76dfbf;color:#0b2831;white-space:nowrap}.ai-foundation .button-primary:hover{background:#9aecd4}
+@media(max-width:900px){.ai-foundation-head{gap:28px;grid-template-columns:1fr}.ai-roadmap{grid-template-columns:repeat(2,minmax(0,1fr))}.ai-foundation-footer{align-items:flex-start;flex-direction:column}.ai-context-example{grid-template-columns:1fr}}
+@media(max-width:560px){.ai-foundation{padding:60px 0}.ai-roadmap{grid-template-columns:1fr;margin-top:30px}.ai-stage summary{padding:22px}.ai-stage summary p{min-height:0}.ai-context-example{padding:24px}.ai-foundation-footer .button{white-space:normal;text-align:center}.ai-foundation-head{gap:14px}}
+</style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -61,7 +72,7 @@
       <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
         <a href="#work">Featured Work</a>
         <a href="#services">Services</a>
-        <a href="#solutions">Solutions</a>
+        <a href="#ai-ready-data">AI Readiness</a>
         <a href="https://calendly.com/hicksanalytics/30min" target="_blank" rel="noopener">Book a Free Call</a>
         <a href="#watch-demo">Watch Demo</a>
         <a href="#about">About</a>
@@ -102,6 +113,28 @@
         <div><span class="outcome-label">Visibility</span><strong>One source of truth</strong></div>
         <div><span class="outcome-label">Decisions</span><strong>Clear, timely insights</strong></div>
         <p>No full-time analytics hire required.</p>
+      </div>
+    </section>
+
+
+    <section class="ai-foundation" id="ai-ready-data" aria-labelledby="ai-foundation-title">
+      <div class="container">
+        <div class="ai-foundation-head">
+          <div><p class="eyebrow">AI-Ready Data &amp; Analytics</p><h2 id="ai-foundation-title">Useful AI starts with<br>data you can trust.</h2><p>Your operational and financial data may be spread across systems that do not speak the same language. I connect the pieces, establish trusted metrics, and build the business context that makes reporting, automation, and AI useful.</p></div>
+          <div><p>Start with the systems you already use.</p><div class="ai-source-cloud" aria-label="Business data sources"><span>Accounting</span><span>CRM</span><span>Spreadsheets</span><span>Scheduling</span><span>Industry applications</span></div><p class="ai-foundation-note">One shared foundation for your team, your reports, and your AI workflows.</p></div>
+        </div>
+        <ol class="ai-roadmap" aria-label="Six stages from business systems to AI automation"><li class="ai-stage"><details><summary><div class="ai-stage-top"><span>01</span><b aria-hidden="true">+</b></div><h3>Business systems</h3><p>Bring scattered sources together.</p></summary><div class="ai-stage-deliverable"><strong>What I deliver</strong>Connect accounting, CRM, spreadsheets, scheduling, and industry applications around one business question.</div></details></li>
+<li class="ai-stage"><details><summary><div class="ai-stage-top"><span>02</span><b aria-hidden="true">+</b></div><h3>Clean data</h3><p>Build a foundation you can trust.</p></summary><div class="ai-stage-deliverable"><strong>What I deliver</strong>Resolve duplicates, inconsistent formats, missing fields, and unreliable refreshes. Validate the data before it drives decisions.</div></details></li>
+<li class="ai-stage"><details><summary><div class="ai-stage-top"><span>03</span><b aria-hidden="true">+</b></div><h3>Trusted KPIs</h3><p>Agree on what the numbers mean.</p></summary><div class="ai-stage-deliverable"><strong>What I deliver</strong>Define and validate revenue, margin, conversion, capacity, and other measures with your team.</div></details></li>
+<li class="ai-stage"><details open><summary><div class="ai-stage-top"><span>04</span><b aria-hidden="true">+</b></div><h3>Business context</h3><p>Give the data shared meaning.</p></summary><div class="ai-stage-deliverable"><strong>What I deliver</strong>Build a semantic layer: shared definitions, relationships, and business rules that reporting tools and AI can use consistently.</div></details></li>
+<li class="ai-stage"><details><summary><div class="ai-stage-top"><span>05</span><b aria-hidden="true">+</b></div><h3>Dashboards & reporting</h3><p>Make the answers easy to use.</p></summary><div class="ai-stage-deliverable"><strong>What I deliver</strong>Deliver focused dashboards and recurring reports that help leaders spot changes and investigate the details.</div></details></li>
+<li class="ai-stage"><details><summary><div class="ai-stage-top"><span>06</span><b aria-hidden="true">+</b></div><h3>AI agents & automation</h3><p>Put trusted data to work.</p></summary><div class="ai-stage-deliverable"><strong>What I deliver</strong>Scope and implement assistants, summaries, and workflows using approved data, controlled access, and checks against known answers.</div></details></li></ol>
+        <p class="ai-foundation-note">Explore each stage to see the work behind it. Your engagement starts where you need help.</p>
+        <div class="ai-context-example">
+          <div><p class="eyebrow">Business context, made concrete</p><h3>The same question should use the same definition.</h3><p>If a dashboard and an AI assistant interpret “revenue” differently, the answers will disagree. Shared definitions keep both grounded in your business rules.</p></div>
+          <div class="ai-metric-example"><div><span>Example definition</span><p>Recognized revenue = posted invoice amounts, less credits; excludes sales tax and unaccepted estimates.</p></div><div><span>Reporting + AI</span><p>“What changed in revenue this month?” uses that same definition, reporting period, and approved data in both places.</p></div></div>
+        </div>
+        <div class="ai-foundation-footer"><p><strong>Start with one reporting problem. Build from there.</strong><br>A focused data engagement can grow into AI readiness, agent implementation, workflow automation, and recurring analytics support as your priorities evolve.</p><a class="button button-primary" href="https://calendly.com/hicksanalytics/30min" target="_blank" rel="noopener">Discuss Your Data &amp; AI Needs</a></div>
       </div>
     </section>
 
@@ -243,7 +276,7 @@
             <p>Make your business data useful for reporting and AI. I connect and clean your operational and financial data, define consistent KPIs, and organize the business context an AI assistant needs to answer meaningful questions.</p>
             <ul><li>Data assessment, cleanup, and system integrations</li><li>Consistent KPI definitions and a shared business data model</li><li>Dashboards and automated reporting built around your decisions</li><li>Controlled data access for AI assistants and automated analysis</li></ul>
             <p>Start with the data and reporting you need today. Add AI questions, summaries, and workflows as your data becomes ready, with access controls, validation, and documentation built into the scope.</p>
-            <p><a href="https://calendly.com/hicksanalytics/30min" target="_blank" rel="noopener">Discuss your data &amp; AI needs</a></p>
+            <p><a href="#ai-ready-data">Explore the path from business data to AI</a></p>
           </article>
         </div>
       </div>

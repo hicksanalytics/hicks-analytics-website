@@ -55,7 +55,7 @@
 @media(max-width:900px){.ai-foundation-head{gap:28px;grid-template-columns:1fr}.ai-roadmap{grid-template-columns:repeat(2,minmax(0,1fr))}.ai-foundation-footer{align-items:flex-start;flex-direction:column}.ai-context-example{grid-template-columns:1fr}}
 @media(max-width:560px){.ai-foundation{padding:60px 0}.ai-roadmap{grid-template-columns:1fr;margin-top:30px}.ai-stage summary{padding:22px}.ai-stage summary p{min-height:0}.ai-context-example{padding:24px}.ai-foundation-footer .button{white-space:normal;text-align:center}.ai-foundation-head{gap:14px}}
 </style>
-</head>
+<style id="assessment-styles">.assessment-scopes{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:36px}.assessment-scope{background:#fff;border:1px solid #c9d9dc;border-radius:18px;padding:32px}.assessment-free{border:2px solid #297f70;background:#f3fbf8}.assessment-scope h3{font-size:1.5rem;line-height:1.25;margin:12px 0 16px}.assessment-scope p{font-size:1rem;line-height:1.6}.assessment-scope ul{padding-left:20px;margin:22px 0;display:grid;gap:12px;font-size:1rem;line-height:1.5}.assessment-note{font-size:.875rem!important;color:#52656b}.assessment-next{margin-top:26px;border-left:3px solid #297f70;padding:8px 0 8px 22px}.assessment-next strong{font-size:1.15rem}.assessment-next p{max-width:800px;font-size:1rem;line-height:1.65;margin:8px 0 0}@media(max-width:700px){.assessment-scopes{grid-template-columns:1fr}.assessment-scope{padding:24px}}#assessment-interest{width:100%;padding:12px;border:1px solid #b6c9ce;border-radius:8px;background:#fff;color:#17333e;font:inherit}</style></head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -134,7 +134,7 @@
           <div><p class="eyebrow">Business context, made concrete</p><h3>The same question should use the same definition.</h3><p>If a dashboard and an AI assistant interpret “revenue” differently, the answers will disagree. Shared definitions keep both grounded in your business rules.</p></div>
           <div class="ai-metric-example"><div><span>Example definition</span><p>Recognized revenue = posted invoice amounts, less credits; excludes sales tax and unaccepted estimates.</p></div><div><span>Reporting + AI</span><p>“What changed in revenue this month?” uses that same definition, reporting period, and approved data in both places.</p></div></div>
         </div>
-        <div class="ai-foundation-footer"><p><strong>Start with one reporting problem. Build from there.</strong><br>A focused data engagement can grow into AI readiness, agent implementation, workflow automation, and recurring analytics support as your priorities evolve.</p><a class="button button-primary" href="https://calendly.com/hicksanalytics/30min" target="_blank" rel="noopener">Discuss Your Data &amp; AI Needs</a></div>
+        <div class="ai-foundation-footer"><p><strong>Start with one reporting problem. Build from there.</strong><br>Start with an AI Readiness Assessment, then use the roadmap to guide data engineering, reporting, agent implementation, automation, and recurring support.</p><a class="button button-primary" href="https://calendly.com/hicksanalytics/30min" target="_blank" rel="noopener">Discuss Your Data &amp; AI Needs</a><a class="button button-secondary" href="#pilot">Explore the Assessment</a></div>
       </div>
     </section>
 
@@ -222,26 +222,29 @@
     </section>
 
     <section class="section pilot-section" id="pilot" aria-labelledby="pilot-title">
-      <div class="container pilot-layout">
-        <div class="pilot-intro reveal">
-          <p class="eyebrow">14-day free trial</p>
-          <h2 id="pilot-title">See what your business data can tell you.</h2>
-          <p>Start with one important decision. Together, we choose an available data source and a few measures that matter. I build a focused dashboard, then walk you through the findings and what to do next.</p>
-          <div class="pilot-actions">
-            <a class="button button-primary" href="#contact" data-pilot-apply>Apply for the Free Trial</a>
-            <a class="button button-secondary" href="https://calendly.com/hicksanalytics/30min" target="_blank" rel="noopener">Book a Free Strategy Call</a>
-            <span>No credit card · No automatic paid plan</span>
+      <div class="container" id="ai-readiness-assessment" style="scroll-margin-top:110px">
+        <div class="pilot-layout">
+          <div class="pilot-intro reveal">
+            <p class="eyebrow">AI Readiness Assessment</p>
+            <h2 id="pilot-title">Know what to fix.<br>Know what to build next.</h2>
+            <p>Get a clear picture of your business data and a practical plan for analytics, AI agents, and automation. I review your systems, metrics, data quality, and access needs, then identify the work that will make the biggest difference.</p>
+            <div class="pilot-actions"><a class="button button-primary" href="#contact" data-assessment-apply>Start the Free Assessment</a><a class="button button-secondary" href="https://calendly.com/hicksanalytics/30min" target="_blank" rel="noopener">Discuss a Full Assessment</a><span>Focused assessment included in the 14-day free trial</span></div>
+          </div>
+          <div class="pilot-detail reveal">
+            <p class="eyebrow">What you take away</p>
+            <ol>
+              <li><span>01</span><div><strong>A map of your systems &amp; data</strong><p>Where information lives, how systems connect, and where fragmented or manual reporting creates gaps.</p></div></li>
+              <li><span>02</span><div><strong>Trusted metric definitions</strong><p>The business rules behind the KPIs you need, with data-quality and access issues that could affect reporting or AI answers.</p></div></li>
+              <li><span>03</span><div><strong>A prioritized action roadmap</strong><p>What to address first, which analytics and AI use cases are feasible, and the next steps, dependencies, and estimated effort.</p></div></li>
+            </ol>
           </div>
         </div>
-        <div class="pilot-detail reveal">
-          <p class="eyebrow">A focused first result</p>
-          <ol>
-            <li><span>01</span><div><strong>Agree on the question</strong><p>We confirm one use case, the data available, the deliverable, and the time commitment before the pilot begins.</p></div></li>
-            <li><span>02</span><div><strong>Review a focused dashboard</strong><p>Review a small set of validated KPIs on your phone. AI questions and briefings can be included when the data and privacy setup support them.</p></div></li>
-            <li><span>03</span><div><strong>Decide what is worth building</strong><p>At the end of two weeks, we review the result and discuss a broader analytics project or ongoing support if it makes sense.</p></div></li>
-          </ol>
-          <p class="pilot-note">Trials are approved individually after a short conversation. We agree on the data, deliverable, and time commitment before starting. Complex cleanup, integrations, and additional views are outside the free trial.</p>
+        <div class="assessment-scopes reveal">
+          <article class="assessment-scope assessment-free"><p class="eyebrow">14-day free trial</p><h3>Focused AI Readiness Assessment</h3><p>Start with one business question and a manageable set of data.</p><ul><li>One use case and up to two available data sources</li><li>Definitions for 3–5 priority KPIs</li><li>Sample-data quality and access review</li><li>Readiness summary and prioritized next steps</li><li>Findings walkthrough at the end of the trial</li></ul><p class="assessment-note">A focused dashboard can be the trial deliverable instead. We agree on the scope before starting.</p></article>
+          <article class="assessment-scope"><p class="eyebrow">Broader consulting engagement</p><h3>Full AI Readiness Assessment</h3><p>Build a roadmap across your operational and financial systems.</p><ul><li>System inventory and data-flow mapping</li><li>Definitions for 10–20 important business metrics</li><li>Data-quality, permissions, and business-context review</li><li>Prioritized analytics, agent, and automation opportunities</li><li>Implementation roadmap with dependencies and effort estimates</li></ul><p class="assessment-note">Quoted after a scoping call. Implementation and ongoing support are agreed separately.</p></article>
         </div>
+        <p class="pilot-note">Free trials are approved individually after a short conversation and begin once scope and sample data are agreed. No credit card and no automatic paid plan. The assessment is a readiness review; integrations, extensive cleanup, production agents, and security certification are outside the free scope.</p>
+        <div class="assessment-next reveal"><strong>A roadmap you can act on.</strong><p>Use the findings to guide your own team, or work with Hicks Analytics on data engineering, reporting, agent implementation, automation, and recurring analytics support.</p></div>
       </div>
     </section>
 
@@ -292,10 +295,10 @@
         <div class="pricing-grid">
           <article class="pricing-card reveal">
             <div class="pricing-card-top"><span>01</span><p>Best place to start</p></div>
-            <h3>Data &amp; Reporting Review</h3>
-            <p>A focused review of your current reports, data, and biggest visibility gaps.</p>
-            <ul><li>Current-state review</li><li>KPI and reporting assessment</li><li>Prioritized recommendations</li><li>Action-plan walkthrough</li></ul>
-            <a href="https://calendly.com/hicksanalytics/30min" target="_blank" rel="noopener">Discuss your review <span aria-hidden="true">↗</span></a>
+            <h3>AI Readiness Assessment</h3>
+            <p>A practical review of your systems, data quality, KPI definitions, and readiness for analytics, AI agents, and automation.</p>
+            <ul><li>System and data inventory</li><li>Metric definitions and data-quality review</li><li>Access needs and AI opportunities</li><li>Prioritized implementation roadmap</li></ul>
+            <a href="https://calendly.com/hicksanalytics/30min" target="_blank" rel="noopener">Discuss your assessment <span aria-hidden="true">↗</span></a>
           </article>
 
           <article class="pricing-card pricing-card-featured reveal">
@@ -316,7 +319,7 @@
         </div>
 
         <div class="pricing-footer reveal">
-          <p><strong>See the value first.</strong> Begin with a focused 14-day free trial. We will review what you learned and discuss the right next step together.</p>
+          <p><strong>See the value first.</strong> Begin with a focused AI Readiness Assessment or dashboard in the 14-day free trial. Review the findings and decide what to build next.</p>
           <a class="button button-primary" href="#pilot">Explore the Free Trial</a>
         </div>
       </div>
@@ -371,6 +374,7 @@
             <label>Email<input name="email" type="email" autocomplete="email" required></label>
           </div>
           <label>Company<input name="company" autocomplete="organization"></label>
+          <label>What would you like to explore?<select id="assessment-interest" name="assessment_interest"><option value="">Choose an option</option><option value="Free AI Readiness Assessment">Free AI Readiness Assessment</option><option value="Full AI Readiness Assessment">Full AI Readiness Assessment</option><option value="Dashboard trial">Dashboard trial</option><option value="Other analytics support">Other analytics support</option></select></label>
           <label>How can I help?<textarea name="message" rows="5" required placeholder="Tell me about the reporting or data challenge you are trying to solve."></textarea></label>
           <button class="button button-primary" type="submit">Send Message</button>
           <p class="form-note" id="form-status" role="status" aria-live="polite">Replies usually arrive within one business day.</p>
@@ -396,5 +400,6 @@
       hubDemoVideo.addEventListener('ended', () => trackDemo('performance_hub_video_completed'));
     }
   </script>
+<script>document.querySelectorAll('[data-assessment-apply]').forEach(function(link){link.addEventListener('click',function(){var choice=document.getElementById('assessment-interest');if(choice)choice.value='Free AI Readiness Assessment';var interest=document.getElementById('contact-interest');if(interest)interest.value='Free AI Readiness Assessment';});});</script>
 </body>
 </html>
